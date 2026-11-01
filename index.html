@@ -4,9 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Учебный интернет-магазин ShopProject: кроссовки, рюкзаки и украшения на каждый день. Быстрая заявка на сайте, доставка по России.">
   <title>Главная — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="preload" fetchpriority="high" as="image" href="images/hero-mobile.jpg" type="image/jpg">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Учебный интернет-магазин">
   <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
@@ -15,6 +18,7 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">ShopProject</a>
@@ -46,15 +50,15 @@
   </header>
 
 
-  <main>
+  <main id="main" class="main">
     <section class="hero">
 
       <picture class="hero__media">
         <source media="(min-width: 1200px)" srcset="images/hero-desktop.jpg">
         <source media="(min-width: 768px)" srcset="images/hero-tablet.jpg">
-        <img src="images/hero-mobile.jpg" alt="Каталог учебных товаров" width="640" height="360" class="hero__image">
+        <img src="images/hero-mobile.jpg" alt="Каталог учебных товаров" width="640" height="360" class="hero__image" fetchpriority="high">
       </picture>
-      
+
       <div class="hero__content">
         <h1 class="hero__title">Учебный интернет-магазин</h1>
         <p class="hero__lead">
@@ -188,7 +192,7 @@
   </dialog>
 
   <button class="callback-fab" type="button" id="open-callback-dialog" aria-label="Заказать обратный звонок">
-    📞
+    <span aria-hidden="true">📞</span>
   </button>
 
 </body>
